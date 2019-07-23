@@ -3,7 +3,7 @@ class Application
   def call(env)
     resp = Rack::Response.new
 
-    time = DateTime.now.strftime("%k:%M")
+    time = DateTime.now
     noon = DateTime.now.change({hour: 12})
 
     if time > noon
