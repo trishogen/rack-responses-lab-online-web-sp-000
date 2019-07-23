@@ -1,6 +1,6 @@
 class Application
 
-  def call(env)
+  def call
     resp = Rack::Response.new
 
     time = DateTime.now.strftime("%k:%M")
