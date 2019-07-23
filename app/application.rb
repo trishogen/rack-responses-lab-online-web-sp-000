@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
 
     time = Time.new.strftime("%k:%M")
-    noon = Time.parse "12:00 pm"
+    noon = Time.noon
 
     if time >= noon
       resp.write "Good Afternoon!"
