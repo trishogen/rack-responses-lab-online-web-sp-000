@@ -3,8 +3,8 @@ class Application
   def call(env)
     resp = Rack::Response.new
 
-    time = Datetime.now.strftime("%k:%M")
-    noon = Datetime.now.noon
+    time = DateTime.now.strftime("%k:%M")
+    noon = DateTime.now.noon
 
     if time >= noon
       resp.write "Good Afternoon!"
