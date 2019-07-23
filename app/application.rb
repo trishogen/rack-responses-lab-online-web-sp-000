@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
 
     time = DateTime.now.strftime("%k:%M")
-    noon = DateTime.now.noon
+    noon = DateTime.now.change({hour: 12})
 
     if time >= noon
       resp.write "Good Afternoon!"
