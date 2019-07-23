@@ -6,10 +6,10 @@ class Application
     time = Time.new.strftime("%k:%M")
     noon = Time.parse "12:00 pm"
 
-    if time > noon
-      resp.write "Good Morning!"
-    else
+    if time >= noon
       resp.write "Good Afternoon!"
+    else
+      resp.write "Good Morning!"
     end
 
     resp.finish
